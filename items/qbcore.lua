@@ -1,1 +1,0 @@
-['megaphone'] 			 	 = {['name'] = 'megaphone', 					['label'] = 'Megaphone', 		['weight'] = 500, 		['type'] = 'item', 		['image'] = 'megaphone.png', 		['unique'] = false, 		['useable'] = false, 	['shouldClose'] = false,	   ['combinable'] = nil,   ['description'] = ''},

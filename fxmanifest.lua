@@ -2,11 +2,11 @@ fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
 
-name 'cb-megaphone'
-version '1.0.1'
-description 'FiveM megaphone script'
-author 'cb, xdope'
-url 'https://cb-development.tebex.io/'
+name 'jraxion_megaphone'
+version '1.0.2'
+description 'FiveM megaphone script by jraxion'
+author 'jraxion'
+url 'https://jraxion.tebex.io/'
 
 
 client_scripts {
@@ -19,4 +19,4 @@ server_scripts {
     'server/main.lua',
 }
 
-dependency 'cb_lib'
+dependency 'jraxion_lib'

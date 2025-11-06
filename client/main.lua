@@ -2,7 +2,7 @@ local function DisableSubmix()
     if IsEntityPlayingAnim(PlayerPedId(), "molly@megaphone", "megaphone_clip", 3) then
         ExecuteCommand('e c')
     end
-    TriggerServerEvent('megaphone:applySubmix', false)
+    TriggerServerEvent('jraxion_megaphone:applySubmix', false)
 end 
 
 local usingMegaphone = false
@@ -14,7 +14,7 @@ function UseMegaphone()
     usingMegaphone = not usingMegaphone
     CreateThread(function()
         if usingMegaphone then
-            TriggerServerEvent('megaphone:applySubmix', true)
+            TriggerServerEvent('jraxion_megaphone:applySubmix', true)
         end
         while usingMegaphone do
             if not IsEntityPlayingAnim(PlayerPedId(), "molly@megaphone", "megaphone_clip", 3) then
@@ -27,8 +27,8 @@ end
 
 exports('UseMegaphone', UseMegaphone)
 
-RegisterNetEvent('megaphone:use')
-AddEventHandler('megaphone:use', function()
+RegisterNetEvent('jraxion_megaphone:use')
+AddEventHandler('jraxion_megaphone:use', function()
     UseMegaphone()
 end)
 
@@ -54,7 +54,7 @@ CreateThread(function()
     AddAudioSubmixOutput(filter, 0)
 end)
 
-RegisterNetEvent('megaphone:updateSubmixStatus', function(state, source)
+RegisterNetEvent('jraxion_megaphone:updateSubmixStatus', function(state, source)
     if state then
         if MEGAPHONE.ForceVolume then
             MumbleSetVolumeOverrideByServerId(source, 0.90)

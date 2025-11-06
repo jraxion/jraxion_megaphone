@@ -1,4 +1,4 @@
-Add item in ox_inventory/data/items.lua
+-- Add item in ox_inventory/data/items.lua
 
 
 ['megaphone'] = {
@@ -6,7 +6,9 @@ Add item in ox_inventory/data/items.lua
     weight = 500,
     consume = 0,
     client = {
-        export = 'cb-megaphone.UseMegaphone',
+        export = 'jraxion_megaphone.UseMegaphone',
     },
     stack = false,
 },
+
+-- if you dont need jraxion_lib.
